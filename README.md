@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://e0.pxfuel.com/wallpapers/478/564/desktop-wallpaper-github-3d-logo-gray-brickwall-creative-social-networks-github-logo-3d-art-github.jpg" width="100%" />
+  <img src="github.gif" width="100%" />
   
   <h1> Alfio Osma </h1>
   <p><i> Los sueños se cumplen sólo si se persiguien.</i></p>
@@ -18,7 +18,7 @@
       </ul>
     </td>
     <td width="40%" align="center">
-      <img src="https://alicewithalgo.com/wp-content/uploads/2026/01/1_dT6hPfQ8vkEhjnGoeWErQg.gif" width="300" />
+      <img src="IAGIF.gif" width="300" />
     </td>
   </tr>
 </table>
