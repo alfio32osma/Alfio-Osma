@@ -1,10 +1,10 @@
 <div align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=auto&height=200&section=header&text=Hola,%20soy%20[Tu%20Nombre]&fontSize=70" width="100%" />
   
-  <h1>🚀 Desarrollador [Tu Especialidad]</h1>
+  <h1>🚀 Alfio Osma </h1>
   <p><i>Transformando ideas en líneas de código eficientes.</i></p>
 </div>
-
+git ad
 <hr />
 
 <table>
