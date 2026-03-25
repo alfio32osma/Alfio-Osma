@@ -2,9 +2,8 @@
   <img src="https://capsule-render.vercel.app/api?type=waving&color=auto&height=200&section=header&text=Hola,%20soy%20[Tu%20Nombre]&fontSize=70" width="100%" />
   
   <h1>🚀 Alfio Osma </h1>
-  <p><i>Transformando ideas en líneas de código eficientes.</i></p>
+  <p><i> Los sueños se cumplen sólo si se persiguien.</i></p>
 </div>
-git ad
 <hr />
 
 <table>
@@ -12,10 +11,10 @@ git ad
     <td width="60%" valign="top">
       <h3> 🔭 Sobre mí </h3>
       <ul>
-        <li>Actualmente trabajando en: <b>[Nombre de tu proyecto]</b></li>
-        <li>Aprendiendo activamente: <b>[Tecnología nueva]</b></li>
-        <li>Interesado en colaborar en: <b>Proyectos de Código Abierto</b></li>
-        <li>Dato curioso: <b>[Algo divertido sobre ti]</b></li>
+        <li>Actualmente estoy cursando la primera promoción del Bootcamp de 4GeeksAcademy</li>
+        <li>Aprendiendo activamente: HTML5, CSS, GIT HUB, JAVASCRIPT & PYTHON.</li>
+        <li>Abierto a nuevos proyectos</li>
+        <li>Dato curioso: Actualmente estoy desarrollando un bot de trading algoritmico para detectar oportunidades de compra en Bitcoin</li>
       </ul>
     </td>
     <td width="40%" align="center">
@@ -51,13 +50,13 @@ git ad
 
 <div align="center">
   <h3>📫 Hablemos</h3>
-  <a href="https://linkedin.com/in/[TU_LINKEDIN]">
+  <a href="https://www.linkedin.com/in/alfio32osma/">
     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
   </a>
-  <a href="mailto:tu-email@ejemplo.com">
+  <a href="alfio32osma@gmail.com">
     <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
   </a>
-  <a href="https://twitter.com/[TU_TWITTER]">
+  <a href="https://x.com/alfio24osma">
     <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" />
   </a>
 </div>
