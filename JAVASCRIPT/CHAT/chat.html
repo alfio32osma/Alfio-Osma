@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <link rel="stylesheet" href="chat_styles.css">
+</head>
+<body>
+    <div class="contenedor-wrapper">
+        <div class="contenedor-principal">
+            <div class="contenedor-chat">
+                <div class="titulo-chat">Chat</div>
+                <div class="lista-mensajes" id="listaMensajes">
+                    <!-- Los mensajes aparecerán aquí -->
+                </div>
+            </div>
+        </div>
+
+        <div class="input-grupo">
+            <div class="emojis-rapidos">
+                <button class="emoji-btn" onclick="agregarEmoji('😀')">😀</button>
+                <button class="emoji-btn" onclick="agregarEmoji('👍')">👍</button>
+                <button class="emoji-btn" onclick="agregarEmoji('❤️')">❤️</button>
+                <button class="emoji-btn" onclick="agregarEmoji('🔥')">🔥</button>
+                <button class="emoji-btn" onclick="agregarEmoji('💯')">💯</button>
+                <button class="emoji-btn" onclick="agregarEmoji('😂')">😂</button>
+                <button class="emoji-btn" onclick="agregarEmoji('🎉')">🎉</button>
+                <button class="emoji-btn" onclick="agregarEmoji('✨')">✨</button>
+            </div>
+            <input type="text" id="inputMensaje" placeholder="Escribe un mensaje...">
+            <button onclick="enviarMensaje()">Enviar</button>
+        </div>
+    </div>
+
+    <script>
+        const respuestasBot = [
+            "😊 Entendido. Procesando tu mensaje...",
+            "🤖 Analizando tu solicitud...",
+            "💡 Idea interesante, procesando...",
+            "⚡ Muy rapido, un momento...",
+            "🎯 Perfecto, en ello estoy...",
+            "👍 Recibido y procesado...",
+            "🚀 Iniciando proceso...",
+            "✨ Magia en proceso..."
+        ];
+
+        function agregarEmoji(emoji) {
+            const input = document.getElementById("inputMensaje");
+            input.value += emoji;
+            input.focus();
+        }
+
+        function enviarMensaje() {
+            const input = document.getElementById("inputMensaje");
+            const listaMensajes = document.getElementById("listaMensajes");
+
+            if (input.value.trim() !== "") {
+                // Agregar mensaje del usuario
+                const mensajeUsuario = document.createElement("div");
+                mensajeUsuario.className = "mensaje usuario";
+                mensajeUsuario.textContent = input.value;
+                listaMensajes.appendChild(mensajeUsuario);
+
+                // Auto scroll al último mensaje
+                listaMensajes.scrollTop = listaMensajes.scrollHeight;
+
+                // Simular respuesta del bot después de 1 segundo
+                setTimeout(() => {
+                    const respuestaBot = document.createElement("div");
+                    respuestaBot.className = "mensaje bot";
+                    const respuestaAleatoria = respuestasBot[Math.floor(Math.random() * respuestasBot.length)];
+                    respuestaBot.textContent = respuestaAleatoria;
+                    listaMensajes.appendChild(respuestaBot);
+                    listaMensajes.scrollTop = listaMensajes.scrollHeight;
+                }, 1000);
+
+                // Limpiar input
+                input.value = "";
+            }
+        }
+
+        // Enviar mensaje con Enter
+        document.getElementById("inputMensaje").addEventListener("keypress", function(e) {
+            if (e.key === "Enter") {
+                enviarMensaje();
+            }
+        });
+    </script>
+</body>
+</html>
