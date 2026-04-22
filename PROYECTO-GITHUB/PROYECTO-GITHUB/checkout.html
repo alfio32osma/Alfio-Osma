@@ -1,0 +1,777 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout | Maison Lumiere</title>
+    <meta
+      name="description"
+      content="Finaliza tu compra en Maison Lumiere con un checkout seguro en 3 pasos: datos personales, direccion de entrega y pago con tarjeta."
+    />
+    <meta
+      name="keywords"
+      content="checkout, pago seguro, ecommerce moda, direccion de entrega, tarjeta"
+    />
+    <meta name="author" content="Maison Lumiere" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="Checkout | Maison Lumiere" />
+    <meta
+      property="og:description"
+      content="Completa tu compra en 3 pasos con una experiencia de pago clara, responsive y optimizada para conversion."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_ES" />
+    <meta
+      property="og:image"
+      content="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1400&q=80"
+    />
+    <link rel="canonical" href="https://www.maisonlumiere.com/checkout.html" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              cream: "#f6f1e8",
+              ink: "#1e1b18",
+              rouge: "#a13f3a",
+              gold: "#b88c4a",
+              fog: "#e8dfd2"
+            },
+            fontFamily: {
+              display: ["DM Serif Display", "serif"],
+              sans: ["Space Grotesk", "sans-serif"]
+            },
+            boxShadow: {
+              soft: "0 10px 30px rgba(30, 27, 24, 0.08)"
+            }
+          }
+        }
+      };
+    </script>
+
+    <style>
+      :root {
+        color-scheme: light;
+      }
+
+      body {
+        background:
+          radial-gradient(circle at 15% 10%, rgba(184, 140, 74, 0.16), transparent 36%),
+          radial-gradient(circle at 88% 12%, rgba(161, 63, 58, 0.14), transparent 30%),
+          linear-gradient(180deg, #fbf8f3 0%, #f6f1e8 100%);
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(12px);
+        animation: riseIn 0.6s ease forwards;
+      }
+
+      .reveal.delay-1 {
+        animation-delay: 0.12s;
+      }
+
+      .reveal.delay-2 {
+        animation-delay: 0.24s;
+      }
+
+      @keyframes riseIn {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .step-dot {
+        transition: all 0.25s ease;
+      }
+
+      .step-dot.active {
+        background: #1e1b18;
+        color: #f6f1e8;
+        border-color: #1e1b18;
+      }
+
+      .step-dot.done {
+        background: #b88c4a;
+        border-color: #b88c4a;
+        color: #1e1b18;
+      }
+    </style>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Checkout Maison Lumiere",
+        "url": "https://www.maisonlumiere.com/checkout.html",
+        "description": "Proceso de compra en 3 pasos para completar pedidos en la tienda online de Maison Lumiere.",
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "Maison Lumiere",
+          "url": "https://www.maisonlumiere.com/"
+        },
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Inicio",
+              "item": "https://www.maisonlumiere.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Checkout",
+              "item": "https://www.maisonlumiere.com/checkout.html"
+            }
+          ]
+        }
+      }
+    </script>
+  </head>
+
+  <body class="font-sans text-ink">
+    <a
+      href="#contenido-principal"
+      class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:rounded-md focus:bg-ink focus:px-4 focus:py-2 focus:text-cream"
+    >
+      Saltar al contenido principal
+    </a>
+
+    <header class="sticky top-0 z-40 border-b border-ink/10 bg-cream/85 backdrop-blur">
+      <div class="mx-auto flex max-w-7xl flex-wrap items-center gap-4 px-4 py-4 sm:px-6 lg:px-8">
+        <a href="index.html" class="shrink-0">
+          <p class="font-display text-2xl leading-none">Maison Lumiere</p>
+          <p class="text-xs tracking-[0.2em] text-ink/70 uppercase">Paris</p>
+        </a>
+
+        <nav aria-label="Navegacion principal">
+          <ul class="hidden items-center gap-7 text-sm font-medium md:flex">
+            <li><a class="transition hover:text-rouge" href="index.html">Inicio</a></li>
+            <li><a class="transition hover:text-rouge" href="catalogo.html">Catalogo</a></li>
+            <li><a class="text-rouge" aria-current="page" href="checkout.html">Checkout</a></li>
+          </ul>
+        </nav>
+
+        <form role="search" class="hidden min-w-[220px] flex-1 items-center gap-2 rounded-full border border-ink/20 bg-white px-3 py-2 lg:flex">
+          <input
+            type="search"
+            aria-label="Buscar productos"
+            placeholder="Buscar productos, categorias..."
+            class="w-full bg-transparent text-sm outline-none placeholder:text-ink/50"
+          />
+          <button type="submit" aria-label="Buscar" class="rounded-full bg-ink p-2 text-cream transition hover:bg-rouge">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-4 w-4" aria-hidden="true">
+              <circle cx="11" cy="11" r="7"></circle>
+              <path d="m20 20-3.5-3.5"></path>
+            </svg>
+          </button>
+        </form>
+
+        <div class="ml-auto flex items-center gap-3">
+          <a
+            id="boton-cesta-checkout"
+            href="carrito.html"
+            class="rounded-full border border-ink px-4 py-2 text-sm font-semibold transition hover:bg-ink hover:text-cream"
+          >
+            Cesta (0)
+          </a>
+
+          <details class="relative">
+            <summary class="list-none cursor-pointer rounded-full border border-ink/20 bg-white px-4 py-2 text-sm font-semibold transition hover:border-ink">
+              Mi cuenta
+            </summary>
+            <div class="absolute right-0 mt-2 w-48 rounded-2xl border border-ink/10 bg-white p-3 shadow-soft">
+              <p class="mb-2 text-xs font-semibold tracking-[0.16em] text-ink/60 uppercase">Usuario demo</p>
+              <a href="#" class="block rounded-lg px-2 py-1 text-sm transition hover:bg-cream">Mi perfil</a>
+              <a href="#" class="block rounded-lg px-2 py-1 text-sm transition hover:bg-cream">Mis pedidos</a>
+              <a href="#" class="block rounded-lg px-2 py-1 text-sm text-rouge transition hover:bg-cream">Cerrar sesion</a>
+            </div>
+          </details>
+        </div>
+      </div>
+    </header>
+
+    <main id="contenido-principal" class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8 lg:py-12">
+      <section class="mb-8 reveal">
+        <p class="text-xs font-semibold tracking-[0.24em] text-rouge uppercase">Checkout seguro</p>
+        <h1 class="mt-2 font-display text-4xl leading-tight sm:text-5xl">Completa tu pedido en 3 pasos</h1>
+        <p class="mt-4 max-w-3xl text-sm leading-relaxed text-ink/80 sm:text-base">
+          Finaliza tu compra de forma rapida y transparente. Introduce tus datos personales, confirma la direccion de entrega y
+          registra tu tarjeta para procesar el pago.
+        </p>
+      </section>
+
+      <div class="grid gap-8 lg:grid-cols-[minmax(0,1fr)_360px] lg:items-start">
+        <section aria-labelledby="titulo-formulario" class="reveal delay-1">
+          <h2 id="titulo-formulario" class="sr-only">Formulario de pago en tres pasos</h2>
+
+          <ol class="mb-6 grid grid-cols-3 gap-3" aria-label="Progreso del checkout">
+            <li class="text-center">
+              <div id="step-dot-1" class="step-dot active mx-auto flex h-10 w-10 items-center justify-center rounded-full border border-ink/30 text-sm font-semibold">1</div>
+              <p class="mt-2 text-xs font-semibold uppercase tracking-[0.14em] text-ink/70">Datos</p>
+            </li>
+            <li class="text-center">
+              <div id="step-dot-2" class="step-dot mx-auto flex h-10 w-10 items-center justify-center rounded-full border border-ink/30 text-sm font-semibold">2</div>
+              <p class="mt-2 text-xs font-semibold uppercase tracking-[0.14em] text-ink/70">Direccion</p>
+            </li>
+            <li class="text-center">
+              <div id="step-dot-3" class="step-dot mx-auto flex h-10 w-10 items-center justify-center rounded-full border border-ink/30 text-sm font-semibold">3</div>
+              <p class="mt-2 text-xs font-semibold uppercase tracking-[0.14em] text-ink/70">Pago</p>
+            </li>
+          </ol>
+
+          <form id="checkout-form" class="rounded-3xl border border-ink/10 bg-white/75 p-5 shadow-soft sm:p-7" novalidate>
+            <fieldset data-step="1" class="space-y-4">
+              <legend class="mb-2 font-display text-2xl">1. Datos personales</legend>
+
+              <div>
+                <label class="mb-1 block text-sm font-semibold" for="nombre">Nombre completo</label>
+                <input
+                  id="nombre"
+                  name="nombre"
+                  type="text"
+                  required
+                  autocomplete="name"
+                  class="w-full rounded-xl border border-ink/20 bg-white px-4 py-3 text-sm outline-none transition focus:border-rouge"
+                  placeholder="Ej. Claire Dubois"
+                />
+              </div>
+
+              <div class="grid gap-4 sm:grid-cols-2">
+                <div>
+                  <label class="mb-1 block text-sm font-semibold" for="email">Correo electronico</label>
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    required
+                    autocomplete="email"
+                    class="w-full rounded-xl border border-ink/20 bg-white px-4 py-3 text-sm outline-none transition focus:border-rouge"
+                    placeholder="nombre@correo.com"
+                  />
+                </div>
+                <div>
+                  <label class="mb-1 block text-sm font-semibold" for="telefono">Telefono</label>
+                  <input
+                    id="telefono"
+                    name="telefono"
+                    type="tel"
+                    required
+                    autocomplete="tel"
+                    class="w-full rounded-xl border border-ink/20 bg-white px-4 py-3 text-sm outline-none transition focus:border-rouge"
+                    placeholder="+33 6 00 00 00 00"
+                  />
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset data-step="2" class="hidden space-y-4" disabled>
+              <legend class="mb-2 font-display text-2xl">2. Direccion de entrega</legend>
+
+              <div>
+                <label class="mb-1 block text-sm font-semibold" for="direccion">Direccion</label>
+                <input
+                  id="direccion"
+                  name="direccion"
+                  type="text"
+                  required
+                  autocomplete="street-address"
+                  class="w-full rounded-xl border border-ink/20 bg-white px-4 py-3 text-sm outline-none transition focus:border-rouge"
+                  placeholder="Rue de Rivoli, 24"
+                />
+              </div>
+
+              <div class="grid gap-4 sm:grid-cols-3">
+                <div class="sm:col-span-1">
+                  <label class="mb-1 block text-sm font-semibold" for="codigoPostal">Codigo postal</label>
+                  <input
+                    id="codigoPostal"
+                    name="codigoPostal"
+                    type="text"
+                    required
+                    autocomplete="postal-code"
+                    class="w-full rounded-xl border border-ink/20 bg-white px-4 py-3 text-sm outline-none transition focus:border-rouge"
+                    placeholder="75001"
+                  />
+                </div>
+                <div class="sm:col-span-2">
+                  <label class="mb-1 block text-sm font-semibold" for="ciudad">Ciudad</label>
+                  <input
+                    id="ciudad"
+                    name="ciudad"
+                    type="text"
+                    required
+                    autocomplete="address-level2"
+                    class="w-full rounded-xl border border-ink/20 bg-white px-4 py-3 text-sm outline-none transition focus:border-rouge"
+                    placeholder="Paris"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label class="mb-1 block text-sm font-semibold" for="pais">Pais</label>
+                <select
+                  id="pais"
+                  name="pais"
+                  required
+                  autocomplete="country-name"
+                  class="w-full rounded-xl border border-ink/20 bg-white px-4 py-3 text-sm outline-none transition focus:border-rouge"
+                >
+                  <option value="">Selecciona un pais</option>
+                  <option>Francia</option>
+                  <option>Espana</option>
+                  <option>Portugal</option>
+                  <option>Alemania</option>
+                  <option>Italia</option>
+                </select>
+              </div>
+            </fieldset>
+
+            <fieldset data-step="3" class="hidden space-y-4" disabled>
+              <legend class="mb-2 font-display text-2xl">3. Pago con tarjeta</legend>
+
+              <div>
+                <label class="mb-1 block text-sm font-semibold" for="titular">Titular de la tarjeta</label>
+                <input
+                  id="titular"
+                  name="titular"
+                  type="text"
+                  required
+                  autocomplete="cc-name"
+                  class="w-full rounded-xl border border-ink/20 bg-white px-4 py-3 text-sm outline-none transition focus:border-rouge"
+                  placeholder="Como aparece en la tarjeta"
+                />
+              </div>
+
+              <div>
+                <label class="mb-1 block text-sm font-semibold" for="numeroTarjeta">Numero de tarjeta</label>
+                <input
+                  id="numeroTarjeta"
+                  name="numeroTarjeta"
+                  type="text"
+                  required
+                  inputmode="numeric"
+                  autocomplete="cc-number"
+                  maxlength="19"
+                  pattern="[0-9 ]{13,19}"
+                  class="w-full rounded-xl border border-ink/20 bg-white px-4 py-3 text-sm outline-none transition focus:border-rouge"
+                  placeholder="1234 5678 9012 3456"
+                />
+              </div>
+
+              <div class="grid gap-4 sm:grid-cols-2">
+                <div>
+                  <label class="mb-1 block text-sm font-semibold" for="vencimiento">Fecha de vencimiento</label>
+                  <input
+                    id="vencimiento"
+                    name="vencimiento"
+                    type="text"
+                    required
+                    inputmode="numeric"
+                    autocomplete="cc-exp"
+                    maxlength="5"
+                    pattern="^(0[1-9]|1[0-2])\/([0-9]{2})$"
+                    class="w-full rounded-xl border border-ink/20 bg-white px-4 py-3 text-sm outline-none transition focus:border-rouge"
+                    placeholder="MM/AA"
+                  />
+                </div>
+                <div>
+                  <label class="mb-1 block text-sm font-semibold" for="cvv">CVV</label>
+                  <input
+                    id="cvv"
+                    name="cvv"
+                    type="text"
+                    required
+                    inputmode="numeric"
+                    autocomplete="cc-csc"
+                    maxlength="4"
+                    pattern="[0-9]{3,4}"
+                    class="w-full rounded-xl border border-ink/20 bg-white px-4 py-3 text-sm outline-none transition focus:border-rouge"
+                    placeholder="123"
+                  />
+                </div>
+              </div>
+
+              <label class="flex items-start gap-3 rounded-xl border border-ink/10 bg-cream/60 p-3 text-sm">
+                <input type="checkbox" required class="mt-1 h-4 w-4 accent-ink" />
+                <span>Acepto los terminos de compra y autorizo el cobro del pedido.</span>
+              </label>
+            </fieldset>
+
+            <div class="mt-7 flex flex-col-reverse gap-3 sm:flex-row sm:justify-between">
+              <button
+                id="btn-prev"
+                type="button"
+                class="rounded-full border border-ink px-5 py-2.5 text-sm font-semibold transition hover:bg-ink hover:text-cream"
+                disabled
+              >
+                Volver
+              </button>
+
+              <button
+                id="btn-next"
+                type="button"
+                class="rounded-full bg-ink px-6 py-2.5 text-sm font-semibold text-cream transition hover:bg-rouge"
+              >
+                Continuar
+              </button>
+
+              <button
+                id="btn-submit"
+                type="submit"
+                class="hidden rounded-full bg-ink px-6 py-2.5 text-sm font-semibold text-cream transition hover:bg-rouge"
+              >
+                Confirmar pago
+              </button>
+            </div>
+          </form>
+
+          <section id="estado-exito" class="mt-6 hidden rounded-3xl border border-gold/40 bg-white/85 p-6 shadow-soft">
+            <h2 class="font-display text-3xl">Pedido confirmado</h2>
+            <p class="mt-2 text-sm leading-relaxed text-ink/80">
+              Tu pago se registro correctamente. Recibiras un correo con la confirmacion y el seguimiento del envio en unos minutos.
+            </p>
+            <p id="pedido-id" class="mt-4 text-sm font-semibold text-rouge"></p>
+          </section>
+        </section>
+
+        <aside class="reveal delay-2 lg:sticky lg:top-24" aria-label="Resumen del pedido">
+          <section class="rounded-3xl border border-ink/10 bg-white/85 p-5 shadow-soft sm:p-6">
+            <h2 class="font-display text-3xl">Resumen</h2>
+
+            <div id="resumen-items" class="mt-5 space-y-4 border-b border-ink/10 pb-5"></div>
+            <button
+              id="vaciar-carrito"
+              type="button"
+              class="mt-4 rounded-full border border-ink px-4 py-2 text-sm font-semibold transition hover:bg-ink hover:text-cream"
+            >
+              Vaciar carrito
+            </button>
+
+            <dl class="mt-5 space-y-2 text-sm">
+              <div class="flex justify-between">
+                <dt class="text-ink/70">Subtotal</dt>
+                <dd id="resumen-subtotal">EUR 0</dd>
+              </div>
+              <div class="flex justify-between">
+                <dt class="text-ink/70">Envio</dt>
+                <dd id="resumen-envio">EUR 0</dd>
+              </div>
+              <div class="flex justify-between">
+                <dt class="text-ink/70">Impuestos</dt>
+                <dd id="resumen-impuestos">EUR 0</dd>
+              </div>
+              <div class="flex justify-between border-t border-ink/10 pt-2 text-base font-semibold">
+                <dt>Total</dt>
+                <dd id="resumen-total">EUR 0</dd>
+              </div>
+            </dl>
+
+            <p class="mt-5 text-xs leading-relaxed text-ink/65">
+              Pago protegido con cifrado SSL de 256 bits. Tus datos de tarjeta se procesan de forma segura y no se almacenan en
+              nuestros servidores.
+            </p>
+          </section>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="mt-8 border-t border-ink/10 bg-white/70 py-10">
+      <div class="mx-auto grid max-w-7xl gap-8 px-4 sm:grid-cols-2 sm:px-6 lg:grid-cols-4 lg:px-8">
+        <section>
+          <h2 class="font-display text-2xl">Maison Lumiere</h2>
+          <p class="mt-3 text-sm text-ink/70">Moda francesa contemporanea con envios rapidos y experiencia premium.</p>
+        </section>
+
+        <section aria-labelledby="footer-categorias">
+          <h3 id="footer-categorias" class="text-sm font-semibold tracking-[0.16em] uppercase">Categorias</h3>
+          <ul class="mt-3 space-y-2 text-sm text-ink/75">
+            <li><a class="hover:text-rouge" href="#">Calzado</a></li>
+            <li><a class="hover:text-rouge" href="#">Camisas</a></li>
+            <li><a class="hover:text-rouge" href="#">Pantalones</a></li>
+            <li><a class="hover:text-rouge" href="#">Accesorios</a></li>
+          </ul>
+        </section>
+
+        <section aria-labelledby="footer-legal">
+          <h3 id="footer-legal" class="text-sm font-semibold tracking-[0.16em] uppercase">Legal</h3>
+          <ul class="mt-3 space-y-2 text-sm text-ink/75">
+            <li><a class="hover:text-rouge" href="#">Terminos y condiciones</a></li>
+            <li><a class="hover:text-rouge" href="#">Politica de privacidad</a></li>
+            <li><a class="hover:text-rouge" href="#">Sobre la marca</a></li>
+          </ul>
+        </section>
+
+        <section aria-labelledby="footer-contacto">
+          <h3 id="footer-contacto" class="text-sm font-semibold tracking-[0.16em] uppercase">Contacto</h3>
+          <ul class="mt-3 space-y-2 text-sm text-ink/75">
+            <li>+33 1 44 78 22 00</li>
+            <li>hello@maisonlumiere.com</li>
+            <li>18 Rue du Faubourg, Paris</li>
+          </ul>
+        </section>
+      </div>
+    </footer>
+    
+    <script>
+      (function () {
+        const CART_KEY = "ml_cart";
+        const form = document.getElementById("checkout-form");
+        const steps = Array.from(form.querySelectorAll("fieldset[data-step]"));
+        const prevButton = document.getElementById("btn-prev");
+        const nextButton = document.getElementById("btn-next");
+        const submitButton = document.getElementById("btn-submit");
+        const successPanel = document.getElementById("estado-exito");
+        const orderIdText = document.getElementById("pedido-id");
+        const stepDots = [
+          document.getElementById("step-dot-1"),
+          document.getElementById("step-dot-2"),
+          document.getElementById("step-dot-3")
+        ];
+
+        const cardNumberInput = document.getElementById("numeroTarjeta");
+        const expiryInput = document.getElementById("vencimiento");
+        const summaryItems = document.getElementById("resumen-items");
+        const summarySubtotal = document.getElementById("resumen-subtotal");
+        const summaryShipping = document.getElementById("resumen-envio");
+        const summaryTaxes = document.getElementById("resumen-impuestos");
+        const summaryTotal = document.getElementById("resumen-total");
+        const clearCartButton = document.getElementById("vaciar-carrito");
+        const cartButton = document.getElementById("boton-cesta-checkout");
+
+        let currentStep = 1;
+
+        function formatEUR(value) {
+          return "EUR " + Number(value || 0);
+        }
+
+        function readCart() {
+          try {
+            const raw = localStorage.getItem(CART_KEY);
+            const cart = raw ? JSON.parse(raw) : [];
+            return Array.isArray(cart) ? cart : [];
+          } catch (_) {
+            return [];
+          }
+        }
+
+        function saveCart(cart) {
+          localStorage.setItem(CART_KEY, JSON.stringify(cart));
+        }
+
+        function updateHeaderCartCount() {
+          const count = readCart().reduce((acc, item) => acc + (Number(item.quantity) || 0), 0);
+          cartButton.textContent = `Cesta (${count})`;
+        }
+
+        function decreaseItem(itemId, itemSize) {
+          const cart = readCart();
+          const itemIndex = cart.findIndex((item) => item.id === itemId && (item.size || "U") === itemSize);
+          if (itemIndex < 0) return;
+
+          const currentQty = Number(cart[itemIndex].quantity) || 1;
+          if (currentQty <= 1) {
+            cart.splice(itemIndex, 1);
+          } else {
+            cart[itemIndex].quantity = currentQty - 1;
+          }
+
+          saveCart(cart);
+          renderSummary();
+        }
+
+        function removeItem(itemId, itemSize) {
+          const cart = readCart().filter((item) => !(item.id === itemId && (item.size || "U") === itemSize));
+          saveCart(cart);
+          renderSummary();
+        }
+
+        function renderSummary() {
+          const cart = readCart();
+          if (cart.length === 0) {
+            summaryItems.innerHTML =
+              '<div class="space-y-3"><p class="text-sm text-ink/70">Tu carrito esta vacio. Agrega productos desde el catalogo para continuar.</p><a href="catalogo.html" class="inline-flex rounded-full border border-ink px-4 py-2 text-sm font-semibold transition hover:bg-ink hover:text-cream">Volver al catalogo</a></div>';
+            summarySubtotal.textContent = formatEUR(0);
+            summaryShipping.textContent = formatEUR(0);
+            summaryTaxes.textContent = formatEUR(0);
+            summaryTotal.textContent = formatEUR(0);
+            nextButton.disabled = true;
+            submitButton.disabled = true;
+            clearCartButton.disabled = true;
+            updateHeaderCartCount();
+            return;
+          }
+
+          const subtotal = cart.reduce((acc, item) => acc + (Number(item.price) || 0) * (Number(item.quantity) || 0), 0);
+          const shipping = subtotal >= 250 ? 0 : 12;
+          const taxes = Math.round(subtotal * 0.082);
+          const total = subtotal + shipping + taxes;
+
+          summaryItems.innerHTML = cart
+            .map(
+              (item) => `
+                <article class="flex items-center gap-3">
+                  <img
+                    src="${item.image || "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=320&q=80"}"
+                    alt="${item.imageAlt || item.name || "Producto Maison Lumiere"}"
+                    class="h-16 w-16 rounded-xl object-cover"
+                    loading="lazy"
+                  />
+                  <div>
+                    <h3 class="font-semibold">${item.name || "Producto"}</h3>
+                    <p class="text-sm text-ink/70">Talla ${item.size || "U"} · Cantidad ${Number(item.quantity) || 1}</p>
+                    <div class="mt-2 flex gap-2">
+                      <button
+                        type="button"
+                        data-action="decrease"
+                        data-id="${item.id || ""}"
+                        data-size="${item.size || "U"}"
+                        class="rounded-full border border-ink/30 px-3 py-1 text-xs font-semibold transition hover:bg-ink hover:text-cream"
+                      >
+                        -1 unidad
+                      </button>
+                      <button
+                        type="button"
+                        data-action="remove"
+                        data-id="${item.id || ""}"
+                        data-size="${item.size || "U"}"
+                        class="rounded-full border border-ink/30 px-3 py-1 text-xs font-semibold transition hover:bg-ink hover:text-cream"
+                      >
+                        Eliminar
+                      </button>
+                    </div>
+                  </div>
+                  <p class="ml-auto text-sm font-semibold">${formatEUR((Number(item.price) || 0) * (Number(item.quantity) || 0))}</p>
+                </article>
+              `
+            )
+            .join("");
+
+          summarySubtotal.textContent = formatEUR(subtotal);
+          summaryShipping.textContent = formatEUR(shipping);
+          summaryTaxes.textContent = formatEUR(taxes);
+          summaryTotal.textContent = formatEUR(total);
+          nextButton.disabled = false;
+          submitButton.disabled = false;
+          clearCartButton.disabled = false;
+          updateHeaderCartCount();
+        }
+
+        function getStepFields(step) {
+          return steps[step - 1].querySelectorAll("input, select, textarea");
+        }
+
+        function updateDots() {
+          stepDots.forEach((dot, index) => {
+            const stepNumber = index + 1;
+            dot.classList.remove("active", "done");
+            if (stepNumber < currentStep) dot.classList.add("done");
+            if (stepNumber === currentStep) dot.classList.add("active");
+          });
+        }
+
+        function updateButtons() {
+          prevButton.disabled = currentStep === 1;
+          nextButton.classList.toggle("hidden", currentStep === 3);
+          submitButton.classList.toggle("hidden", currentStep !== 3);
+        }
+
+        function showStep(step) {
+          currentStep = step;
+          steps.forEach((fieldset, idx) => {
+            const isActive = idx === step - 1;
+            fieldset.classList.toggle("hidden", !isActive);
+            fieldset.disabled = !isActive;
+          });
+          updateDots();
+          updateButtons();
+        }
+
+        function validateCurrentStep() {
+          const fields = Array.from(getStepFields(currentStep));
+          for (const field of fields) {
+            if (!field.checkValidity()) {
+              field.reportValidity();
+              return false;
+            }
+          }
+          return true;
+        }
+
+        function randomOrderId() {
+          return "ML-" + Math.floor(100000 + Math.random() * 900000);
+        }
+
+        nextButton.addEventListener("click", function () {
+          if (!validateCurrentStep()) return;
+          showStep(Math.min(3, currentStep + 1));
+        });
+
+        prevButton.addEventListener("click", function () {
+          showStep(Math.max(1, currentStep - 1));
+        });
+
+        cardNumberInput.addEventListener("input", function () {
+          const digits = this.value.replace(/\D/g, "").slice(0, 16);
+          this.value = digits.replace(/(.{4})/g, "$1 ").trim();
+        });
+
+        expiryInput.addEventListener("input", function () {
+          const digits = this.value.replace(/\D/g, "").slice(0, 4);
+          if (digits.length >= 3) {
+            this.value = digits.slice(0, 2) + "/" + digits.slice(2);
+          } else {
+            this.value = digits;
+          }
+        });
+
+        form.addEventListener("submit", function (event) {
+          event.preventDefault();
+          if (readCart().length === 0) return;
+          if (!validateCurrentStep()) return;
+
+          const orderId = randomOrderId();
+          localStorage.removeItem(CART_KEY);
+          form.classList.add("hidden");
+          successPanel.classList.remove("hidden");
+          orderIdText.textContent = "Numero de pedido: " + orderId;
+          successPanel.scrollIntoView({ behavior: "smooth", block: "start" });
+          updateHeaderCartCount();
+        });
+
+        summaryItems.addEventListener("click", function (event) {
+          const trigger = event.target.closest("button[data-action]");
+          if (!trigger) return;
+
+          const action = trigger.dataset.action;
+          const itemId = trigger.dataset.id || "";
+          const itemSize = trigger.dataset.size || "U";
+          if (!itemId) return;
+
+          if (action === "decrease") decreaseItem(itemId, itemSize);
+          if (action === "remove") removeItem(itemId, itemSize);
+        });
+
+        clearCartButton.addEventListener("click", function () {
+          localStorage.removeItem(CART_KEY);
+          renderSummary();
+        });
+
+        renderSummary();
+        showStep(1);
+      })();
+    </script>
+  </body>
+</html>

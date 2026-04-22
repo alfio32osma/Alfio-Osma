@@ -1,0 +1,569 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maison Lumiere | Catalogo</title>
+    <meta
+      name="description"
+      content="Explora el catalogo de Maison Lumiere con filtros por categoria y talla. Moda francesa contemporanea con experiencia responsive."
+    />
+    <meta
+      name="keywords"
+      content="catalogo de ropa, moda francesa, filtro por talla, ecommerce fashion, productos en rejilla"
+    />
+    <meta name="author" content="Maison Lumiere" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="Maison Lumiere | Catalogo" />
+    <meta
+      property="og:description"
+      content="Catalogo visual y funcional con filtros por categoria y talla para la tienda online de Maison Lumiere."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1400&q=80" />
+    <link rel="canonical" href="https://www.maisonlumiere.com/catalogo" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              cream: "#f6f1e8",
+              ink: "#1e1b18",
+              rouge: "#a13f3a",
+              gold: "#b88c4a",
+              fog: "#e8dfd2"
+            },
+            fontFamily: {
+              display: ["DM Serif Display", "serif"],
+              sans: ["Space Grotesk", "sans-serif"]
+            },
+            boxShadow: {
+              soft: "0 10px 30px rgba(30, 27, 24, 0.08)"
+            }
+          }
+        }
+      };
+    </script>
+
+    <style>
+      :root {
+        color-scheme: light;
+      }
+
+      body {
+        background:
+          radial-gradient(circle at 15% 10%, rgba(184, 140, 74, 0.15), transparent 36%),
+          radial-gradient(circle at 88% 12%, rgba(161, 63, 58, 0.14), transparent 30%),
+          linear-gradient(180deg, #fbf8f3 0%, #f6f1e8 100%);
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(14px);
+        animation: riseIn 0.8s ease forwards;
+      }
+
+      .reveal.delay-1 {
+        animation-delay: 0.1s;
+      }
+
+      .reveal.delay-2 {
+        animation-delay: 0.2s;
+      }
+
+      @keyframes riseIn {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+
+  <body class="font-sans text-ink">
+    <a
+      href="#contenido-principal"
+      class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:rounded-md focus:bg-ink focus:px-4 focus:py-2 focus:text-cream"
+    >
+      Saltar al contenido principal
+    </a>
+
+    <header class="sticky top-0 z-40 border-b border-ink/10 bg-cream/80 backdrop-blur">
+      <div class="mx-auto flex max-w-7xl flex-wrap items-center gap-4 px-4 py-4 sm:px-6 lg:px-8">
+        <a href="index.html" class="shrink-0">
+          <p class="font-display text-2xl leading-none">Maison Lumiere</p>
+          <p class="text-xs tracking-[0.2em] text-ink/70 uppercase">Paris</p>
+        </a>
+
+        <nav aria-label="Navegacion principal">
+          <ul class="hidden items-center gap-7 text-sm font-medium md:flex">
+            <li><a class="transition hover:text-rouge" href="index.html">Inicio</a></li>
+            <li><a class="text-rouge" aria-current="page" href="catalogo.html">Catalogo</a></li>
+            <li><a class="transition hover:text-rouge" href="checkout.html">Checkout</a></li>
+          </ul>
+        </nav>
+
+        <form role="search" class="hidden min-w-[220px] flex-1 items-center gap-2 rounded-full border border-ink/20 bg-white px-3 py-2 lg:flex">
+          <input
+            type="search"
+            aria-label="Buscar productos"
+            placeholder="Buscar productos, categorias..."
+            class="w-full bg-transparent text-sm outline-none placeholder:text-ink/50"
+          />
+          <button type="submit" aria-label="Buscar" class="rounded-full bg-ink p-2 text-cream transition hover:bg-rouge">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-4 w-4" aria-hidden="true">
+              <circle cx="11" cy="11" r="7"></circle>
+              <path d="m20 20-3.5-3.5"></path>
+            </svg>
+          </button>
+        </form>
+
+        <div class="ml-auto flex items-center gap-3">
+          <a
+            id="boton-cesta"
+            href="carrito.html"
+            class="rounded-full border border-ink px-4 py-2 text-sm font-semibold transition hover:bg-ink hover:text-cream"
+          >
+            Cesta (0)
+          </a>
+
+          <details class="relative">
+            <summary class="list-none cursor-pointer rounded-full border border-ink/20 bg-white px-4 py-2 text-sm font-semibold transition hover:border-ink">
+              Mi cuenta
+            </summary>
+            <div class="absolute right-0 mt-2 w-48 rounded-2xl border border-ink/10 bg-white p-3 shadow-soft">
+              <p class="mb-2 text-xs font-semibold tracking-[0.16em] text-ink/60 uppercase">Usuario demo</p>
+              <a href="#" class="block rounded-lg px-2 py-1 text-sm transition hover:bg-cream">Mi perfil</a>
+              <a href="#" class="block rounded-lg px-2 py-1 text-sm transition hover:bg-cream">Mis pedidos</a>
+              <a href="#" class="block rounded-lg px-2 py-1 text-sm text-rouge transition hover:bg-cream">Cerrar sesion</a>
+            </div>
+          </details>
+        </div>
+      </div>
+    </header>
+
+    <main id="contenido-principal" class="pb-14">
+      <section class="mx-auto max-w-7xl px-4 pt-12 sm:px-6 lg:px-8 lg:pt-16">
+        <div class="reveal flex flex-wrap items-end justify-between gap-4">
+          <div>
+            <p class="text-xs font-semibold tracking-[0.24em] text-rouge uppercase">Catalogo 2026</p>
+            <h1 class="mt-2 font-display text-4xl leading-tight sm:text-5xl">Coleccion completa</h1>
+          </div>
+          <p class="max-w-xl text-sm leading-relaxed text-ink/70 sm:text-base">
+            Descubre 20 referencias en rejilla para esta demo de tienda online. Filtra por categoria y talla para revisar el
+            comportamiento funcional del prototipo.
+          </p>
+        </div>
+      </section>
+
+      <section id="filtros" class="mx-auto mt-8 max-w-7xl px-4 sm:px-6 lg:px-8">
+        <form class="reveal delay-1 rounded-3xl border border-ink/10 bg-white/80 p-5 shadow-soft sm:p-6" aria-label="Filtros de catalogo">
+          <div class="grid gap-4 md:grid-cols-[1fr_1fr_auto] md:items-end">
+            <div>
+              <label for="filtro-categoria" class="mb-2 block text-sm font-semibold">Categoria</label>
+              <select
+                id="filtro-categoria"
+                name="categoria"
+                class="w-full rounded-xl border border-ink/20 bg-cream px-4 py-3 text-sm focus:border-rouge focus:outline-none focus:ring-2 focus:ring-rouge/30"
+              >
+                <option value="all">Todas las categorias</option>
+                <option value="mujer">Mujer</option>
+                <option value="hombre">Hombre</option>
+                <option value="accesorios">Accesorios</option>
+                <option value="atelier">Atelier</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="filtro-talla" class="mb-2 block text-sm font-semibold">Talla</label>
+              <select
+                id="filtro-talla"
+                name="talla"
+                class="w-full rounded-xl border border-ink/20 bg-cream px-4 py-3 text-sm focus:border-rouge focus:outline-none focus:ring-2 focus:ring-rouge/30"
+              >
+                <option value="all">Todas las tallas</option>
+                <option value="xs">XS</option>
+                <option value="s">S</option>
+                <option value="m">M</option>
+                <option value="l">L</option>
+                <option value="xl">XL</option>
+                <option value="u">Unica</option>
+              </select>
+            </div>
+
+            <button
+              type="button"
+              id="limpiar-filtros"
+              class="rounded-xl border border-ink px-5 py-3 text-sm font-semibold transition hover:bg-ink hover:text-cream"
+            >
+              Limpiar filtros
+            </button>
+          </div>
+
+          <p id="resultado-filtros" class="mt-4 text-sm text-ink/70">Mostrando 20 de 20 productos</p>
+        </form>
+      </section>
+
+      <section id="productos" class="mx-auto mt-8 max-w-7xl px-4 sm:px-6 lg:px-8">
+        <h2 class="sr-only">Listado de productos</h2>
+        <div id="grid-productos" class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <article class="reveal overflow-hidden rounded-3xl border border-ink/10 bg-white shadow-soft" data-categoria="mujer" data-tallas="xs,s,m,l">
+            <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=900&q=80" alt="Blazer estructurado marfil" class="h-64 w-full object-cover" loading="lazy" />
+            <div class="p-5">
+              <p class="text-xs font-semibold tracking-[0.2em] text-rouge uppercase">Mujer</p>
+              <h3 class="mt-2 font-display text-2xl">Blazer Rivoli</h3>
+              <p class="mt-2 text-sm text-ink/75">Corte recto con botonadura limpia.</p>
+              <p class="mt-4 text-sm font-semibold">EUR 189</p>
+            </div>
+          </article>
+
+          <article class="reveal delay-1 overflow-hidden rounded-3xl border border-ink/10 bg-white shadow-soft" data-categoria="mujer" data-tallas="s,m,l">
+            <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80" alt="Vestido midi color canela" class="h-64 w-full object-cover" loading="lazy" />
+            <div class="p-5">
+              <p class="text-xs font-semibold tracking-[0.2em] text-rouge uppercase">Mujer</p>
+              <h3 class="mt-2 font-display text-2xl">Vestido Seine</h3>
+              <p class="mt-2 text-sm text-ink/75">Tela fluida y cintura marcada.</p>
+              <p class="mt-4 text-sm font-semibold">EUR 149</p>
+            </div>
+          </article>
+
+          <article class="reveal delay-2 overflow-hidden rounded-3xl border border-ink/10 bg-white shadow-soft" data-categoria="hombre" data-tallas="s,m,l,xl">
+            <img src="https://images.unsplash.com/photo-1520975954732-35dd22299614?auto=format&fit=crop&w=900&q=80" alt="Camisa azul de hombre" class="h-64 w-full object-cover" loading="lazy" />
+            <div class="p-5">
+              <p class="text-xs font-semibold tracking-[0.2em] text-rouge uppercase">Hombre</p>
+              <h3 class="mt-2 font-display text-2xl">Camisa Louvre</h3>
+              <p class="mt-2 text-sm text-ink/75">Algodon premium de alta transpiracion.</p>
+              <p class="mt-4 text-sm font-semibold">EUR 119</p>
+            </div>
+          </article>
+
+          <article class="reveal overflow-hidden rounded-3xl border border-ink/10 bg-white shadow-soft" data-categoria="hombre" data-tallas="m,l,xl">
+            <img src="https://images.unsplash.com/photo-1592878904946-b3cd8ae243d0?auto=format&fit=crop&w=900&q=80" alt="Pantalon sastre gris oscuro" class="h-64 w-full object-cover" loading="lazy" />
+            <div class="p-5">
+              <p class="text-xs font-semibold tracking-[0.2em] text-rouge uppercase">Hombre</p>
+              <h3 class="mt-2 font-display text-2xl">Pantalon Bastille</h3>
+              <p class="mt-2 text-sm text-ink/75">Sastreria flexible para uso diario.</p>
+              <p class="mt-4 text-sm font-semibold">EUR 139</p>
+            </div>
+          </article>
+
+          <article class="reveal delay-1 overflow-hidden rounded-3xl border border-ink/10 bg-white shadow-soft" data-categoria="accesorios" data-tallas="u">
+            <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=900&q=80" alt="Bolso de cuero negro" class="h-64 w-full object-cover" loading="lazy" />
+            <div class="p-5">
+              <p class="text-xs font-semibold tracking-[0.2em] text-rouge uppercase">Accesorios</p>
+              <h3 class="mt-2 font-display text-2xl">Bolso Montaigne</h3>
+              <p class="mt-2 text-sm text-ink/75">Cuero texturizado con herrajes dorados.</p>
+              <p class="mt-4 text-sm font-semibold">EUR 210</p>
+            </div>
+          </article>
+
+          <article class="reveal delay-2 overflow-hidden rounded-3xl border border-ink/10 bg-white shadow-soft" data-categoria="accesorios" data-tallas="u">
+            <img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=900&q=80" alt="Cinturon de piel marron" class="h-64 w-full object-cover" loading="lazy" />
+            <div class="p-5">
+              <p class="text-xs font-semibold tracking-[0.2em] text-rouge uppercase">Accesorios</p>
+              <h3 class="mt-2 font-display text-2xl">Cinturon Tuileries</h3>
+              <p class="mt-2 text-sm text-ink/75">Hebilla minimalista en acabado mate.</p>
+              <p class="mt-4 text-sm font-semibold">EUR 79</p>
+            </div>
+          </article>
+
+          <article class="reveal overflow-hidden rounded-3xl border border-ink/10 bg-white shadow-soft" data-categoria="atelier" data-tallas="xs,s,m">
+            <img src="https://images.unsplash.com/photo-1464863979621-258859e62245?auto=format&fit=crop&w=900&q=80" alt="Chaqueta atelier color marfil" class="h-64 w-full object-cover" loading="lazy" />
+            <div class="p-5">
+              <p class="text-xs font-semibold tracking-[0.2em] text-rouge uppercase">Atelier</p>
+              <h3 class="mt-2 font-display text-2xl">Chaqueta Orsay</h3>
+              <p class="mt-2 text-sm text-ink/75">Edicion limitada con forro de seda.</p>
+              <p class="mt-4 text-sm font-semibold">EUR 320</p>
+            </div>
+          </article>
+
+          <article class="reveal delay-1 overflow-hidden rounded-3xl border border-ink/10 bg-white shadow-soft" data-categoria="atelier" data-tallas="s,m,l">
+            <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=80" alt="Falda atelier plisada" class="h-64 w-full object-cover" loading="lazy" />
+            <div class="p-5">
+              <p class="text-xs font-semibold tracking-[0.2em] text-rouge uppercase">Atelier</p>
+              <h3 class="mt-2 font-display text-2xl">Falda Garnier</h3>
+              <p class="mt-2 text-sm text-ink/75">Plisado profundo con movimiento suave.</p>
+              <p class="mt-4 text-sm font-semibold">EUR 245</p>
+            </div>
+          </article>
+
+          <article class="reveal delay-2 overflow-hidden rounded-3xl border border-ink/10 bg-white shadow-soft" data-categoria="mujer" data-tallas="xs,s,m">
+            <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=80" alt="Top de punto fino beige" class="h-64 w-full object-cover" loading="lazy" />
+            <div class="p-5">
+              <p class="text-xs font-semibold tracking-[0.2em] text-rouge uppercase">Mujer</p>
+              <h3 class="mt-2 font-display text-2xl">Top Belleville</h3>
+              <p class="mt-2 text-sm text-ink/75">Punto italiano de tacto suave.</p>
+              <p class="mt-4 text-sm font-semibold">EUR 99</p>
+            </div>
+          </article>
+
+          <article class="reveal overflow-hidden rounded-3xl border border-ink/10 bg-white shadow-soft" data-categoria="mujer" data-tallas="s,m,l">
+            <img src="https://images.unsplash.com/photo-1495385794356-15371f348c31?auto=format&fit=crop&w=900&q=80" alt="Pantalon blanco de mujer" class="h-64 w-full object-cover" loading="lazy" />
+            <div class="p-5">
+              <p class="text-xs font-semibold tracking-[0.2em] text-rouge uppercase">Mujer</p>
+              <h3 class="mt-2 font-display text-2xl">Pantalon Marne</h3>
+              <p class="mt-2 text-sm text-ink/75">Pernera amplia con caida elegante.</p>
+              <p class="mt-4 text-sm font-semibold">EUR 129</p>
+            </div>
+          </article>
+
+          <article class="reveal delay-1 overflow-hidden rounded-3xl border border-ink/10 bg-white shadow-soft" data-categoria="hombre" data-tallas="m,l,xl">
+            <img src="https://images.unsplash.com/photo-1617127365659-c47fa864d8bc?auto=format&fit=crop&w=900&q=80" alt="Gabardina de hombre en tono beige" class="h-64 w-full object-cover" loading="lazy" />
+            <div class="p-5">
+              <p class="text-xs font-semibold tracking-[0.2em] text-rouge uppercase">Hombre</p>
+              <h3 class="mt-2 font-display text-2xl">Gabardina Opera</h3>
+              <p class="mt-2 text-sm text-ink/75">Impermeable ligero para entretiempo.</p>
+              <p class="mt-4 text-sm font-semibold">EUR 265</p>
+            </div>
+          </article>
+
+          <article class="reveal delay-2 overflow-hidden rounded-3xl border border-ink/10 bg-white shadow-soft" data-categoria="hombre" data-tallas="s,m,l">
+            <img src="https://images.unsplash.com/photo-1473966968600-fa801b869a1a?auto=format&fit=crop&w=900&q=80" alt="Jersey azul marino de hombre" class="h-64 w-full object-cover" loading="lazy" />
+            <div class="p-5">
+              <p class="text-xs font-semibold tracking-[0.2em] text-rouge uppercase">Hombre</p>
+              <h3 class="mt-2 font-display text-2xl">Jersey Voltaire</h3>
+              <p class="mt-2 text-sm text-ink/75">Merino fino para capa ligera.</p>
+              <p class="mt-4 text-sm font-semibold">EUR 115</p>
+            </div>
+          </article>
+
+          <article class="reveal overflow-hidden rounded-3xl border border-ink/10 bg-white shadow-soft" data-categoria="accesorios" data-tallas="u">
+            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=80" alt="Zapatillas blancas minimalistas" class="h-64 w-full object-cover" loading="lazy" />
+            <div class="p-5">
+              <p class="text-xs font-semibold tracking-[0.2em] text-rouge uppercase">Accesorios</p>
+              <h3 class="mt-2 font-display text-2xl">Sneakers Le Marais</h3>
+              <p class="mt-2 text-sm text-ink/75">Piel suave con suela de caucho natural.</p>
+              <p class="mt-4 text-sm font-semibold">EUR 170</p>
+            </div>
+          </article>
+
+          <article class="reveal delay-1 overflow-hidden rounded-3xl border border-ink/10 bg-white shadow-soft" data-categoria="accesorios" data-tallas="u">
+            <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&w=900&q=80" alt="Reloj metalico plateado" class="h-64 w-full object-cover" loading="lazy" />
+            <div class="p-5">
+              <p class="text-xs font-semibold tracking-[0.2em] text-rouge uppercase">Accesorios</p>
+              <h3 class="mt-2 font-display text-2xl">Reloj Concorde</h3>
+              <p class="mt-2 text-sm text-ink/75">Caja fina con correa de acero cepillado.</p>
+              <p class="mt-4 text-sm font-semibold">EUR 230</p>
+            </div>
+          </article>
+
+          <article class="reveal delay-2 overflow-hidden rounded-3xl border border-ink/10 bg-white shadow-soft" data-categoria="atelier" data-tallas="xs,s,m,l">
+            <img src="https://images.unsplash.com/photo-1485968579580-b6d095142e6e?auto=format&fit=crop&w=900&q=80" alt="Abrigo largo negro atelier" class="h-64 w-full object-cover" loading="lazy" />
+            <div class="p-5">
+              <p class="text-xs font-semibold tracking-[0.2em] text-rouge uppercase">Atelier</p>
+              <h3 class="mt-2 font-display text-2xl">Abrigo Vendome</h3>
+              <p class="mt-2 text-sm text-ink/75">Lana premium de patronaje artesanal.</p>
+              <p class="mt-4 text-sm font-semibold">EUR 390</p>
+            </div>
+          </article>
+
+          <article class="reveal overflow-hidden rounded-3xl border border-ink/10 bg-white shadow-soft" data-categoria="atelier" data-tallas="s,m,l">
+            <img src="https://images.unsplash.com/photo-1516762689617-e1cffcef479d?auto=format&fit=crop&w=900&q=80" alt="Traje cruzado color marino" class="h-64 w-full object-cover" loading="lazy" />
+            <div class="p-5">
+              <p class="text-xs font-semibold tracking-[0.2em] text-rouge uppercase">Atelier</p>
+              <h3 class="mt-2 font-display text-2xl">Traje Elysee</h3>
+              <p class="mt-2 text-sm text-ink/75">Sastreria cruzada con pinza suave.</p>
+              <p class="mt-4 text-sm font-semibold">EUR 360</p>
+            </div>
+          </article>
+
+          <article class="reveal delay-1 overflow-hidden rounded-3xl border border-ink/10 bg-white shadow-soft" data-categoria="mujer" data-tallas="xs,s,m,l">
+            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=80" alt="Vestido negro recto" class="h-64 w-full object-cover" loading="lazy" />
+            <div class="p-5">
+              <p class="text-xs font-semibold tracking-[0.2em] text-rouge uppercase">Mujer</p>
+              <h3 class="mt-2 font-display text-2xl">Vestido Lumiere</h3>
+              <p class="mt-2 text-sm text-ink/75">Silueta limpia de noche urbana.</p>
+              <p class="mt-4 text-sm font-semibold">EUR 175</p>
+            </div>
+          </article>
+
+          <article class="reveal delay-2 overflow-hidden rounded-3xl border border-ink/10 bg-white shadow-soft" data-categoria="hombre" data-tallas="m,l,xl">
+            <img src="https://images.unsplash.com/photo-1490578474895-699cd4e2cf59?auto=format&fit=crop&w=900&q=80" alt="Chaqueta bomber verde olivo" class="h-64 w-full object-cover" loading="lazy" />
+            <div class="p-5">
+              <p class="text-xs font-semibold tracking-[0.2em] text-rouge uppercase">Hombre</p>
+              <h3 class="mt-2 font-display text-2xl">Bomber Saint-Denis</h3>
+              <p class="mt-2 text-sm text-ink/75">Ligera, urbana y resistente al viento.</p>
+              <p class="mt-4 text-sm font-semibold">EUR 189</p>
+            </div>
+          </article>
+
+          <article class="reveal overflow-hidden rounded-3xl border border-ink/10 bg-white shadow-soft" data-categoria="accesorios" data-tallas="u">
+            <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&w=900&q=80" alt="Gafas de sol de marco negro" class="h-64 w-full object-cover" loading="lazy" />
+            <div class="p-5">
+              <p class="text-xs font-semibold tracking-[0.2em] text-rouge uppercase">Accesorios</p>
+              <h3 class="mt-2 font-display text-2xl">Gafas Saint-Germain</h3>
+              <p class="mt-2 text-sm text-ink/75">Marco liviano con lentes UV400.</p>
+              <p class="mt-4 text-sm font-semibold">EUR 95</p>
+            </div>
+          </article>
+
+          <article class="reveal delay-1 overflow-hidden rounded-3xl border border-ink/10 bg-white shadow-soft" data-categoria="atelier" data-tallas="xs,s,m">
+            <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=900&q=80" alt="Blusa blanca atelier con volantes" class="h-64 w-full object-cover" loading="lazy" />
+            <div class="p-5">
+              <p class="text-xs font-semibold tracking-[0.2em] text-rouge uppercase">Atelier</p>
+              <h3 class="mt-2 font-display text-2xl">Blusa Cluny</h3>
+              <p class="mt-2 text-sm text-ink/75">Detalle artesanal en cuello y punos.</p>
+              <p class="mt-4 text-sm font-semibold">EUR 215</p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="mt-8 border-t border-ink/10 bg-white/70 py-10">
+      <div class="mx-auto grid max-w-7xl gap-8 px-4 sm:grid-cols-2 sm:px-6 lg:grid-cols-4 lg:px-8">
+        <section>
+          <h2 class="font-display text-2xl">Maison Lumiere</h2>
+          <p class="mt-3 text-sm text-ink/70">Moda francesa contemporanea con envios rapidos y experiencia premium.</p>
+        </section>
+
+        <section aria-labelledby="footer-categorias">
+          <h3 id="footer-categorias" class="text-sm font-semibold tracking-[0.16em] uppercase">Categorias</h3>
+          <ul class="mt-3 space-y-2 text-sm text-ink/75">
+            <li><a class="hover:text-rouge" href="#">Calzado</a></li>
+            <li><a class="hover:text-rouge" href="#">Camisas</a></li>
+            <li><a class="hover:text-rouge" href="#">Pantalones</a></li>
+            <li><a class="hover:text-rouge" href="#">Accesorios</a></li>
+          </ul>
+        </section>
+
+        <section aria-labelledby="footer-legal">
+          <h3 id="footer-legal" class="text-sm font-semibold tracking-[0.16em] uppercase">Legal</h3>
+          <ul class="mt-3 space-y-2 text-sm text-ink/75">
+            <li><a class="hover:text-rouge" href="#">Terminos y condiciones</a></li>
+            <li><a class="hover:text-rouge" href="#">Politica de privacidad</a></li>
+            <li><a class="hover:text-rouge" href="#">Sobre la marca</a></li>
+          </ul>
+        </section>
+
+        <section aria-labelledby="footer-contacto">
+          <h3 id="footer-contacto" class="text-sm font-semibold tracking-[0.16em] uppercase">Contacto</h3>
+          <ul class="mt-3 space-y-2 text-sm text-ink/75">
+            <li>+33 1 44 78 22 00</li>
+            <li>hello@maisonlumiere.com</li>
+            <li>18 Rue du Faubourg, Paris</li>
+          </ul>
+        </section>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        const categoriaSelect = document.getElementById("filtro-categoria");
+        const tallaSelect = document.getElementById("filtro-talla");
+        const limpiarBtn = document.getElementById("limpiar-filtros");
+        const resultado = document.getElementById("resultado-filtros");
+        const cestaBtn = document.getElementById("boton-cesta");
+        const productos = Array.from(document.querySelectorAll("#grid-productos article"));
+        const CART_KEY = "ml_cart";
+        const SELECTED_PRODUCT_KEY = "ml_selected_product";
+
+        function leerCarrito() {
+          try {
+            const raw = localStorage.getItem(CART_KEY);
+            const cart = raw ? JSON.parse(raw) : [];
+            return Array.isArray(cart) ? cart : [];
+          } catch (_) {
+            return [];
+          }
+        }
+
+        function actualizarCesta() {
+          const totalItems = leerCarrito().reduce((acc, item) => acc + (item.quantity || 0), 0);
+          cestaBtn.textContent = `Cesta (${totalItems})`;
+        }
+
+        function normalizarPrecio(textoPrecio) {
+          const numero = Number((textoPrecio || "").replace(/[^\d.,]/g, "").replace(",", "."));
+          return Number.isFinite(numero) ? numero : 0;
+        }
+
+        function extraerProductoDesdeTarjeta(tarjeta, index) {
+          const nombre = tarjeta.querySelector("h3")?.textContent?.trim() || "Producto Maison Lumiere";
+          const precioTexto = tarjeta.querySelector(".p-5 p:last-child")?.textContent?.trim() || "EUR 0";
+          const descripcion = tarjeta.querySelector(".p-5 p:nth-of-type(2)")?.textContent?.trim() || "";
+          const categoria = tarjeta.dataset.categoria || "general";
+          const tallas = (tarjeta.dataset.tallas || "u").split(",").map((t) => t.trim().toUpperCase());
+          const img = tarjeta.querySelector("img");
+          const idBase = nombre.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") || `producto-${index + 1}`;
+
+          return {
+            id: idBase,
+            name: nombre,
+            price: normalizarPrecio(precioTexto),
+            priceLabel: precioTexto,
+            description: descripcion,
+            category: categoria,
+            sizes: tallas,
+            defaultSize: tallas[0] || "U",
+            image: img?.src || "",
+            imageAlt: img?.alt || nombre,
+            sku: `ML-${(index + 1).toString().padStart(4, "0")}`
+          };
+        }
+
+        function abrirVistaProducto(producto) {
+          localStorage.setItem(SELECTED_PRODUCT_KEY, JSON.stringify(producto));
+          window.location.href = "vista-producto.html";
+        }
+
+        function aplicarFiltros() {
+          const categoria = categoriaSelect.value;
+          const talla = tallaSelect.value;
+          let visibles = 0;
+
+          productos.forEach((producto) => {
+            const categoriaProducto = producto.dataset.categoria;
+            const tallasProducto = producto.dataset.tallas.split(",");
+
+            const coincideCategoria = categoria === "all" || categoriaProducto === categoria;
+            const coincideTalla = talla === "all" || tallasProducto.includes(talla);
+            const mostrar = coincideCategoria && coincideTalla;
+
+            producto.classList.toggle("hidden", !mostrar);
+            if (mostrar) visibles += 1;
+          });
+
+          resultado.textContent = `Mostrando ${visibles} de ${productos.length} productos`;
+        }
+
+        categoriaSelect.addEventListener("change", aplicarFiltros);
+        tallaSelect.addEventListener("change", aplicarFiltros);
+        limpiarBtn.addEventListener("click", () => {
+          categoriaSelect.value = "all";
+          tallaSelect.value = "all";
+          aplicarFiltros();
+        });
+
+        productos.forEach((tarjeta, index) => {
+          tarjeta.setAttribute("role", "button");
+          tarjeta.setAttribute("tabindex", "0");
+          tarjeta.setAttribute("aria-label", `Ver ${tarjeta.querySelector("h3")?.textContent?.trim() || "producto"}`);
+
+          tarjeta.addEventListener("click", () => {
+            abrirVistaProducto(extraerProductoDesdeTarjeta(tarjeta, index));
+          });
+
+          tarjeta.addEventListener("keydown", (event) => {
+            if (event.key === "Enter" || event.key === " ") {
+              event.preventDefault();
+              abrirVistaProducto(extraerProductoDesdeTarjeta(tarjeta, index));
+            }
+          });
+        });
+
+        actualizarCesta();
+      })();
+    </script>
+  </body>
+</html>

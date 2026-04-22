@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maison Lumiere | Vista de producto</title>
+    <meta
+      name="description"
+      content="Vista de producto de Maison Lumiere con imagen, detalles principales, selector de cantidad y descripcion completa."
+    />
+    <meta
+      name="keywords"
+      content="vista de producto, ficha de producto, ecommerce moda, Maison Lumiere"
+    />
+    <meta name="author" content="Maison Lumiere" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="Maison Lumiere | Vista de producto" />
+    <meta
+      property="og:description"
+      content="Ficha de producto con informacion de compra y descripcion detallada para ecommerce de moda."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1400&q=80" />
+    <link rel="canonical" href="https://www.maisonlumiere.com/producto/chaqueta-atelier-lumiere" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              cream: "#f6f1e8",
+              ink: "#1e1b18",
+              rouge: "#a13f3a",
+              gold: "#b88c4a",
+              fog: "#e8dfd2"
+            },
+            fontFamily: {
+              display: ["DM Serif Display", "serif"],
+              sans: ["Space Grotesk", "sans-serif"]
+            },
+            boxShadow: {
+              soft: "0 10px 30px rgba(30, 27, 24, 0.08)"
+            }
+          }
+        }
+      };
+    </script>
+
+    <style>
+      :root {
+        color-scheme: light;
+      }
+
+      body {
+        background:
+          radial-gradient(circle at 15% 10%, rgba(184, 140, 74, 0.15), transparent 36%),
+          radial-gradient(circle at 88% 12%, rgba(161, 63, 58, 0.14), transparent 30%),
+          linear-gradient(180deg, #fbf8f3 0%, #f6f1e8 100%);
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(14px);
+        animation: riseIn 0.8s ease forwards;
+      }
+
+      .reveal.delay-1 {
+        animation-delay: 0.15s;
+      }
+
+      .reveal.delay-2 {
+        animation-delay: 0.3s;
+      }
+
+      @keyframes riseIn {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "OnlineStore",
+        "name": "Maison Lumiere",
+        "url": "https://www.maisonlumiere.com/",
+        "description": "Marca de moda francesa contemporanea con tienda online de ropa premium.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "FR",
+          "addressLocality": "Paris"
+        },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://www.maisonlumiere.com/?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
+  </head>
+
+  <body class="font-sans text-ink">
+    <a
+      href="#contenido-principal"
+      class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:rounded-md focus:bg-ink focus:px-4 focus:py-2 focus:text-cream"
+    >
+      Saltar al contenido principal
+    </a>
+
+    <header class="sticky top-0 z-40 border-b border-ink/10 bg-cream/80 backdrop-blur">
+      <div class="mx-auto flex max-w-7xl flex-wrap items-center gap-4 px-4 py-4 sm:px-6 lg:px-8">
+        <a href="index.html" class="shrink-0">
+          <p class="font-display text-2xl leading-none">Maison Lumiere</p>
+          <p class="text-xs tracking-[0.2em] text-ink/70 uppercase">Paris</p>
+        </a>
+
+        <nav aria-label="Navegacion principal">
+          <ul class="hidden items-center gap-7 text-sm font-medium md:flex">
+            <li><a class="transition hover:text-rouge" href="index.html">Inicio</a></li>
+            <li><a class="text-rouge" aria-current="page" href="catalogo.html">Catalogo</a></li>
+            <li><a class="transition hover:text-rouge" href="checkout.html">Checkout</a></li>
+          </ul>
+        </nav>
+
+        <form role="search" class="hidden min-w-[220px] flex-1 items-center gap-2 rounded-full border border-ink/20 bg-white px-3 py-2 lg:flex">
+          <input
+            type="search"
+            aria-label="Buscar productos"
+            placeholder="Buscar productos, categorias..."
+            class="w-full bg-transparent text-sm outline-none placeholder:text-ink/50"
+          />
+          <button type="submit" aria-label="Buscar" class="rounded-full bg-ink p-2 text-cream transition hover:bg-rouge">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-4 w-4" aria-hidden="true">
+              <circle cx="11" cy="11" r="7"></circle>
+              <path d="m20 20-3.5-3.5"></path>
+            </svg>
+          </button>
+        </form>
+
+        <div class="ml-auto flex items-center gap-3">
+          <a
+            id="boton-cesta-producto"
+            href="carrito.html"
+            class="rounded-full border border-ink px-4 py-2 text-sm font-semibold transition hover:bg-ink hover:text-cream"
+          >
+            Cesta (0)
+          </a>
+
+          <details class="relative">
+            <summary class="list-none cursor-pointer rounded-full border border-ink/20 bg-white px-4 py-2 text-sm font-semibold transition hover:border-ink">
+              Mi cuenta
+            </summary>
+            <div class="absolute right-0 mt-2 w-48 rounded-2xl border border-ink/10 bg-white p-3 shadow-soft">
+              <p class="mb-2 text-xs font-semibold tracking-[0.16em] text-ink/60 uppercase">Usuario demo</p>
+              <a href="#" class="block rounded-lg px-2 py-1 text-sm transition hover:bg-cream">Mi perfil</a>
+              <a href="#" class="block rounded-lg px-2 py-1 text-sm transition hover:bg-cream">Mis pedidos</a>
+              <a href="#" class="block rounded-lg px-2 py-1 text-sm text-rouge transition hover:bg-cream">Cerrar sesion</a>
+            </div>
+          </details>
+        </div>
+      </div>
+    </header>
+
+    <main id="contenido-principal" class="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
+      <section class="reveal overflow-hidden rounded-3xl border border-ink/10 bg-white/80 shadow-soft">
+        <div class="grid md:grid-cols-2">
+          <div class="md:h-full">
+            <img
+              id="producto-imagen"
+              src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1400&q=80"
+              alt="Chaqueta Atelier Lumiere en tono camel"
+              class="h-full min-h-[340px] w-full object-cover"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="reveal delay-1 p-6 sm:p-8 lg:p-10">
+            <p id="producto-categoria" class="text-xs font-semibold tracking-[0.22em] text-rouge uppercase">Novedad atelier</p>
+            <h1 id="producto-nombre" class="mt-3 font-display text-4xl leading-tight sm:text-5xl">Chaqueta Atelier Lumiere</h1>
+
+            <dl class="mt-8 space-y-4 text-sm sm:text-base">
+              <div class="flex items-center justify-between border-b border-ink/10 pb-3">
+                <dt class="font-medium text-ink/70">Codigo / referencia</dt>
+                <dd id="producto-sku" class="font-semibold">ML-CH-2048</dd>
+              </div>
+              <div class="flex items-center justify-between border-b border-ink/10 pb-3">
+                <dt class="font-medium text-ink/70">Talla</dt>
+                <dd class="font-semibold">
+                  <select
+                    id="talla"
+                    name="talla"
+                    class="rounded-lg border border-ink/20 bg-cream px-3 py-1 text-sm focus:border-rouge focus:outline-none focus:ring-2 focus:ring-rouge/30"
+                  >
+                    <option value="M" selected>M</option>
+                  </select>
+                </dd>
+              </div>
+              <div class="flex items-center justify-between border-b border-ink/10 pb-3">
+                <dt class="font-medium text-ink/70">Precio</dt>
+                <dd id="producto-precio" class="text-xl font-bold text-rouge">EUR 189</dd>
+              </div>
+            </dl>
+
+            <div class="mt-8 flex flex-col gap-4 sm:flex-row sm:items-end">
+              <div class="sm:w-36">
+                <label for="cantidad" class="mb-2 block text-sm font-medium">Cantidad</label>
+                <input
+                  id="cantidad"
+                  name="cantidad"
+                  type="number"
+                  min="1"
+                  value="1"
+                  class="w-full rounded-xl border border-ink/20 bg-cream px-4 py-3 text-base font-semibold outline-none ring-0 transition focus:border-ink"
+                />
+              </div>
+              <button
+                id="agregar-carrito"
+                type="button"
+                class="rounded-xl bg-ink px-6 py-3 text-sm font-semibold text-cream transition hover:bg-rouge focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink"
+              >
+                Agregar al carrito
+              </button>
+            </div>
+            <p id="estado-carrito" class="mt-3 text-sm text-ink/70" aria-live="polite"></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="reveal delay-2 mt-10 rounded-3xl border border-ink/10 bg-white/70 p-6 shadow-soft sm:p-8">
+        <h2 class="font-display text-3xl sm:text-4xl">Descripcion detallada</h2>
+
+        <div class="mt-6 grid gap-6 md:grid-cols-2">
+          <article class="rounded-2xl bg-cream/80 p-5">
+            <h3 class="text-lg font-semibold">Materiales</h3>
+            <p id="producto-descripcion" class="mt-3 text-sm leading-relaxed text-ink/80 sm:text-base">
+              Exterior en mezcla premium de lana y algodon, con forro interior transpirable de viscosa. Botones reforzados y
+              costuras dobles para mayor durabilidad en uso diario.
+            </p>
+          </article>
+
+          <article class="rounded-2xl bg-cream/80 p-5">
+            <h3 class="text-lg font-semibold">Uso recomendado</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink/80 sm:text-base">
+              Ideal para oficina, reuniones profesionales, cenas urbanas y viajes de fin de semana. Combina con pantalones de
+              sastreria o denim para una silueta elegante y versatil.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="mt-8 border-t border-ink/10 bg-white/70 py-10">
+      <div class="mx-auto grid max-w-7xl gap-8 px-4 sm:grid-cols-2 sm:px-6 lg:grid-cols-4 lg:px-8">
+        <section>
+          <h2 class="font-display text-2xl">Maison Lumiere</h2>
+          <p class="mt-3 text-sm text-ink/70">Moda francesa contemporanea con envios rapidos y experiencia premium.</p>
+        </section>
+
+        <section aria-labelledby="footer-categorias">
+          <h3 id="footer-categorias" class="text-sm font-semibold tracking-[0.16em] uppercase">Categorias</h3>
+          <ul class="mt-3 space-y-2 text-sm text-ink/75">
+            <li><a class="hover:text-rouge" href="#">Calzado</a></li>
+            <li><a class="hover:text-rouge" href="#">Camisas</a></li>
+            <li><a class="hover:text-rouge" href="#">Pantalones</a></li>
+            <li><a class="hover:text-rouge" href="#">Accesorios</a></li>
+          </ul>
+        </section>
+
+        <section aria-labelledby="footer-legal">
+          <h3 id="footer-legal" class="text-sm font-semibold tracking-[0.16em] uppercase">Legal</h3>
+          <ul class="mt-3 space-y-2 text-sm text-ink/75">
+            <li><a class="hover:text-rouge" href="#">Terminos y condiciones</a></li>
+            <li><a class="hover:text-rouge" href="#">Politica de privacidad</a></li>
+            <li><a class="hover:text-rouge" href="#">Sobre la marca</a></li>
+          </ul>
+        </section>
+
+        <section aria-labelledby="footer-contacto">
+          <h3 id="footer-contacto" class="text-sm font-semibold tracking-[0.16em] uppercase">Contacto</h3>
+          <ul class="mt-3 space-y-2 text-sm text-ink/75">
+            <li>+33 1 44 78 22 00</li>
+            <li>hello@maisonlumiere.com</li>
+            <li>18 Rue du Faubourg, Paris</li>
+          </ul>
+        </section>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        const CART_KEY = "ml_cart";
+        const SELECTED_PRODUCT_KEY = "ml_selected_product";
+
+        const imageEl = document.getElementById("producto-imagen");
+        const categoryEl = document.getElementById("producto-categoria");
+        const nameEl = document.getElementById("producto-nombre");
+        const skuEl = document.getElementById("producto-sku");
+        const sizeEl = document.getElementById("talla");
+        const priceEl = document.getElementById("producto-precio");
+        const quantityEl = document.getElementById("cantidad");
+        const addToCartBtn = document.getElementById("agregar-carrito");
+        const descriptionEl = document.getElementById("producto-descripcion");
+        const cartStateEl = document.getElementById("estado-carrito");
+        const cartButton = document.getElementById("boton-cesta-producto");
+
+        const defaultProduct = {
+          id: "chaqueta-atelier-lumiere",
+          name: "Chaqueta Atelier Lumiere",
+          price: 189,
+          priceLabel: "EUR 189",
+          description:
+            "Exterior en mezcla premium de lana y algodon, con forro interior transpirable de viscosa. Botones reforzados y costuras dobles para mayor durabilidad en uso diario.",
+          category: "atelier",
+          sizes: ["S", "M", "L"],
+          defaultSize: "M",
+          image: "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1400&q=80",
+          imageAlt: "Chaqueta Atelier Lumiere en tono camel",
+          sku: "ML-CH-2048"
+        };
+
+        function leerJSON(key, fallback) {
+          try {
+            const raw = localStorage.getItem(key);
+            if (!raw) return fallback;
+            const parsed = JSON.parse(raw);
+            return parsed || fallback;
+          } catch (_) {
+            return fallback;
+          }
+        }
+
+        function guardarJSON(key, value) {
+          localStorage.setItem(key, JSON.stringify(value));
+        }
+
+        function actualizarCesta() {
+          const count = leerJSON(CART_KEY, []).reduce((acc, item) => acc + (Number(item.quantity) || 0), 0);
+          cartButton.textContent = `Cesta (${count})`;
+        }
+
+        function formatearPrecio(valor) {
+          return `EUR ${Number(valor || 0)}`;
+        }
+
+        const selectedProduct = {
+          ...defaultProduct,
+          ...leerJSON(SELECTED_PRODUCT_KEY, defaultProduct)
+        };
+
+        function renderProduct(product) {
+          imageEl.src = product.image || defaultProduct.image;
+          imageEl.alt = product.imageAlt || product.name;
+          categoryEl.textContent = (product.category || "general").toUpperCase();
+          nameEl.textContent = product.name || defaultProduct.name;
+          skuEl.textContent = product.sku || defaultProduct.sku;
+          priceEl.textContent = product.priceLabel || formatearPrecio(product.price);
+          descriptionEl.textContent = product.description || defaultProduct.description;
+
+          const sizes = Array.isArray(product.sizes) && product.sizes.length > 0 ? product.sizes : ["U"];
+          const defaultSize = product.defaultSize || sizes[0];
+          sizeEl.innerHTML = sizes
+            .map((size) => `<option value="${size}" ${size === defaultSize ? "selected" : ""}>${size}</option>`)
+            .join("");
+
+          document.title = `Maison Lumiere | ${nameEl.textContent}`;
+        }
+
+        function addToCart() {
+          const quantity = Math.max(1, Number(quantityEl.value) || 1);
+          const size = sizeEl.value || selectedProduct.defaultSize || "U";
+          const cart = leerJSON(CART_KEY, []);
+
+          const item = {
+            id: selectedProduct.id,
+            name: selectedProduct.name,
+            price: Number(selectedProduct.price) || 0,
+            priceLabel: selectedProduct.priceLabel || formatearPrecio(selectedProduct.price),
+            image: selectedProduct.image,
+            imageAlt: selectedProduct.imageAlt || selectedProduct.name,
+            sku: selectedProduct.sku,
+            size,
+            quantity
+          };
+
+          const existingIndex = cart.findIndex((product) => product.id === item.id && product.size === item.size);
+          if (existingIndex >= 0) {
+            cart[existingIndex].quantity += item.quantity;
+          } else {
+            cart.push(item);
+          }
+
+          guardarJSON(CART_KEY, cart);
+          cartStateEl.textContent = "Producto agregado al carrito.";
+          actualizarCesta();
+        }
+
+        addToCartBtn.addEventListener("click", addToCart);
+        renderProduct(selectedProduct);
+        actualizarCesta();
+      })();
+    </script>
+  </body>
+</html>
