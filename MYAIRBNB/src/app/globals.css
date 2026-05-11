@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+:root {
+	--app-bg: #e7e7e7;
+	--surface-bg: #f4f4f4;
+	--text-color: #191919;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	margin: 0;
+	min-height: 100%;
+}
+
+body {
+	background:
+		radial-gradient(circle at 10% 10%, #f3f3f3 0, transparent 42%),
+		radial-gradient(circle at 90% 80%, #ededed 0, transparent 38%),
+		var(--app-bg);
+	color: var(--text-color);
+	font-family: var(--font-nunito-sans), "Segoe UI", sans-serif;
+}
+
+.catalog-pin-icon {
+	background: transparent;
+	border: 0;
+}
+
+.catalog-pin-inner {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	min-width: 56px;
+	padding: 0 10px;
+	border-radius: 999px;
+	background-color: #111827;
+	color: #ffffff;
+	font-size: 12px;
+	font-weight: 700;
+	box-shadow: 0 8px 18px rgb(17 24 39 / 28%);
+	white-space: nowrap;
+}
